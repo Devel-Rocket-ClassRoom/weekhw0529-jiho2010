@@ -124,6 +124,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Unreal10th_HomeWork.cpp" />
+    <ClCompile Include="Week5_2_P1.cpp" />
+    <ClCompile Include="Week5_2_P2.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Week5_2_P1.h" />
+    <ClInclude Include="Week5_2_P2.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -5,6 +5,8 @@
 #include <stdio.h>
 #include <time.h>
 
+#include "Week5_2_P1.h"
+#include "Week5_2_P2.h"
 
 using namespace std;
 
@@ -15,8 +17,8 @@ int main()
 	//Seed = 0;		// 테스트용으로 임시로 설정
 	//srand(Seed);	// 시드값 초기화
     
-	
-
+	Homework01_Run();
+	//Homework02_Run();
 }
 
 // 프로그램 실행: <Ctrl+F5> 또는 [디버그] > [디버깅하지 않고 시작] 메뉴
