@@ -21,19 +21,14 @@ struct Date
 		InMoth = Moth;
 		InDay = Day;
 	}
-
-	Date operator-(const Date& InOther) const
-	{
-		Date Result;
-		Result.Year = this->Year - InOther.Year;
-		Result.Moth = this->Moth - InOther.Moth;
-		Result.Day = this->Day - InOther.Day;
-		return Result;
-	}
 };
 
 void Homework01_Run();
 
+void GetInput_Date(Date& Input);
+
+bool Check_LeepYear(Date Year);
+
 int Calculation_Days(Date Start, Date Input);
 
-bool Check_LeapYear(Date Da);
+const char* DayofWeek_Calculation(int Days);

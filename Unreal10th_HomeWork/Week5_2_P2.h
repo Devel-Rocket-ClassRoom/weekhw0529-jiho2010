@@ -1,4 +1,6 @@
 #pragma once
+#include <iostream>
+using namespace std;
 
 // 2. 블랙잭 만들기
 //	- 게임 목표
@@ -32,3 +34,47 @@
 //			- 딜러가 더 가까우면 패배.
 //		- 블랙잭: 처음 받은 두 장이 A + 10(또는 J, Q, K)이면 블랙잭.일반적으로 블랙잭이 단순 21점보다 우선함.
 //	- Homework02_Run(); 함수로 실행 가능해야 함.
+enum CardShape
+{
+	Spade,
+	Diamond,
+	Heart,
+	Club
+};
+
+struct TrumpCard
+{
+	int Spade[13] = { 1,2,3,4,5,6,7,8,9,10,11,12,13 };
+	int Diamond[13] = { 1,2,3,4,5,6,7,8,9,10,11,12,13 };
+	int Heart[13] = { 1,2,3,4,5,6,7,8,9,10,11,12,13 };
+	int Club[13] = { 1,2,3,4,5,6,7,8,9,10,11,12,13 };
+};
+
+struct Table
+{
+	int Card_Shape[11] = { 0, };
+	int Card_Number[11] = { 0, };
+	int Score = 0;
+	int Max_Score = 0;
+	bool BlackJack = false;
+	bool Bust = false;
+	bool Dealer = false;
+};
+
+void Homework02_Run();
+
+void GetCard(TrumpCard& card, Table& ind);
+
+void PrintTable(Table player, Table dealer);
+
+void PrintCard(Table ind);
+
+void BlackJack(Table& player, Table& dealer);
+
+void SumScore(Table& ind);
+
+void PlayerTurn(TrumpCard& card, Table& player, Table& dealer);
+
+void DealerTurn(TrumpCard& card, Table& player, Table& dealer);
+
+void Result(Table& player, Table& dealer);
